@@ -20,10 +20,10 @@ let atimport = require('postcss-import');
 let concat = require('gulp-concat');
 
 gulp.task('styles', () => {
-	return gulp.src('./**/*.scss')
+	return gulp.src('./index.css')
 		.pipe(postcss([
-			vars(),
-			atimport()
+			atimport(),
+			vars()
 		]))
 		.pipe(concat('oto.css'))
 		.pipe(gulp.dest('./'));

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "The UI components of the Cahoots forum",
   "scripts": {
-    "build": "gulp"
+    "styles": "gulp",
+    "styleguide": "styledown ./oto.css styleguide.config.md > styleguide.html",
+    "build": "npm run styles && npm run styleguide"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-postcss": "^5.1.8",
     "postcss-import": "^5.2.2",
-    "postcss-simple-vars": "^0.3.0"
+    "postcss-simple-vars": "^0.3.0",
+    "styledown": "^1.0.2"
   }
 }
